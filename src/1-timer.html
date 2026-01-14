@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <!-- Подключаем общие стили -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <!-- Включаем общий header -->
+    <include src="./partials/header.html"></include>
+
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <!-- Кнопка "назад" -->
+          <include src="./partials/back-link.html"></include>
+
+          <h1 class="title">Countdown Timer</h1>
+
+          <!-- Ваш таймер -->
+          <div class="input-container">
+            <input
+              type="text"
+              id="datetime-picker"
+              placeholder="Select date and time"
+            />
+            <button type="button" data-start disabled>Start</button>
+          </div>
+
+          <div class="timer">
+            <div class="field">
+              <span class="value" data-days>00</span>
+              <span class="label">Days</span>
+            </div>
+            <div class="field">
+              <span class="value" data-hours>00</span>
+              <span class="label">Hours</span>
+            </div>
+            <div class="field">
+              <span class="value" data-minutes>00</span>
+              <span class="label">Minutes</span>
+            </div>
+            <div class="field">
+              <span class="value" data-seconds>00</span>
+              <span class="label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Включаем общий footer -->
+    <include src="./partials/footer.html"></include>
+
+    <!-- Подключаем скрипт -->
+    <script type="module" src="./js/1-timer.js"></script>
+  </body>
+</html>
